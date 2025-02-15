@@ -170,5 +170,39 @@ public class OperaterEx {
 		// 어떤 부분을 고려해야 할지도 감이 안 잡힘 삼항 연산자 부분 다시 공부해보자..		
 }
 	
-	
+	public void op6() {
+		
+		/*ATM에서 사용자가 원하는 금액을 입력하면, 5만원, 1만원, 5천원, 1천원 단위로 최소 개수의 지폐로 돈을 인출하라
+ex) 사용자가 123000원을 입력하면, 5만원 지폐 2장, 1만원 지폐 2장, 5천원 지폐 0장, 1천원 지폐 3장이 필요함
+
+
+[실행화면]
+출금할 금액 입력 : 123000
+50000원: 2
+10000원: 2
+5000원: 0
+1000원: 3
+
+
+출금할 금액 입력 : 253000
+50000원: 5
+10000원: 0
+5000원: 0
+1000원: 3
+*/
+		System.out.print("출금할 금액 입력 :");
+		int price = sc.nextInt();
+		
+		System.out.println("50000원 :" + price/50000);
+		int price2 = price -  (price/50000);
+		
+		System.out.println("10000원 :" + price2);
+		int price3 = price2 - (price2/ 10000);
+		
+		System.out.println("5000원 :"+ price3);
+		int price4 = price3 - (price3/ 5000);
+		
+		System.out.println("1000원 :" + price4);
+		
+	}
 }

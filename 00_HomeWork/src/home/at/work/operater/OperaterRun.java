@@ -8,7 +8,8 @@ public class OperaterRun {
 	//	run.op2();
 	//	run.op3();
 	//	run.op4();
-		run.op5();
+	//	run.op5();
+		run.op6();
 		
 		
 	

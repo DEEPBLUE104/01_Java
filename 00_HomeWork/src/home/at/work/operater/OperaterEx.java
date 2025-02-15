@@ -191,18 +191,58 @@ ex) 사용자가 123000원을 입력하면, 5만원 지폐 2장, 1만원 지폐 
 1000원: 3
 */
 		System.out.print("출금할 금액 입력 :");
-		int price = sc.nextInt();
+		int amount = sc.nextInt();
 		
-		System.out.println("50000원 :" + price/50000);
-		int price2 = price -  (price/50000);
+		int fiftyTh = amount / 50000; // 5만원짜리 지폐 갯수
+		//amount = amount % 50000; //5만원짜리 지폐 거르고 난 뒤 나머지 금액
+		// 나머지값을 amount 변수에 재대입해야 아래 다음 지폐에서 재사용 할 수 있음.
 		
-		System.out.println("10000원 :" + price2);
-		int price3 = price2 - (price2/ 10000);
+		amount %= 50000; //복합대입연산자(%와 = 을 합쳐 사용)
 		
-		System.out.println("5000원 :"+ price3);
-		int price4 = price3 - (price3/ 5000);
+		// += -= *= /=
+		// amount = amount - 50000;
+		// amount -= 50000;
 		
-		System.out.println("1000원 :" + price4);
+		int tenTh = amount / 10000; //1만짜리 지폐 갯수
+		amount %= 10000;
 		
+		int fiveTh = amount / 5000; // 5천원짜리 지폐 갯수
+		amount %= 5000;
+		
+		int oneTh = amount / 1000; //1천원짜리 지폐 갯수
+		
+		System.out.println("50000원 : " + fiftyTh);
+		System.out.println("10000원 : " + tenTh);
+		System.out.println("5000원 : " + fiveTh);
+		System.out.println("1000원 : " + oneTh);
+		
+		//이번에는 풀이 방식은 맞았어! 잘했다 잘했다
+	}
+
+	public void op7() {
+	
+	/*사용자로부터 두 개의 정수를 입력받아, 
+첫 번째 수가 두 번째 수의 배수인지 확인하고 결과를 출력해라
+만약 배수라면 "배수입니다"를 출력하고, 아니라면 "배수가 아닙니다"를 출력
+
+
+[실행화면]
+첫 번째 수 : 100
+두 번째 수 : 5
+배수입니다
+
+첫 번째 수 : 200
+두 번째 수 : 7
+배수가 아닙니다*/
+		
+		System.out.print("첫 번째 수 :");
+		int num1 = sc.nextInt();
+		
+		System.out.print("두 번째 수 :");
+		int num2 = sc.nextInt();
+		
+		String result = num1 % num2 == 0? "배수입니다." : "배수가 아닙니다.";
+		
+		System.out.println(result);
 	}
 }

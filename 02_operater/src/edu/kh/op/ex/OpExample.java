@@ -137,7 +137,7 @@ public class OpExample {
 		// 음수 입니다.
 		
 		Scanner sc = new Scanner (System.in);
-		System.out.println("정수 입력: ");
+		System.out.print("정수 입력: ");
 		int input = sc.nextInt();
 		
 		String result2 = input >= 0? "양수 입니다.":"음수 입니다.";

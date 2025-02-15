@@ -54,12 +54,12 @@ ex.
 			//input = 5 > 5, 4, 3, 2, 1
 			// 시작 5부터 끝 1, 1씩 감소하면서..
 			
-			for (int i = input; i>= 1; i--) {
+			for (int i = input; i >= 1; i--) {
 				System.out.println(i+ " ");
-			
-			
-		 else { //조건
-			System.out.print("1이상의 숫자를 입력하세요 :");
+			}
+			System.out.println();
+		} else { //조건
+			System.out.print("1이상의 숫자를 입력하세요.");
 		}
 		
 		
@@ -87,7 +87,7 @@ ex.
 			System.out.println(i + "=" + sum); 
 	} else { // 이전 턴
 		System.out.println(i + "+");
-	
+	}
 }
 	}
 	
@@ -132,8 +132,6 @@ ex.
 	
 	}
 
-
-
 	public void practice5(){
 
 		
@@ -162,32 +160,39 @@ ex.
 		
 	}
 	
-	public void practice6(){
-	/*사용자로부터 입력 받은 숫자의 단부터 9단까지 출력하세요.
-	단, 2~9를 사이가 아닌 수를 입력하면 “2~9 사이 숫자만 입력해주세요”를 출력하세요.
+	 public void practice6() {
+	   
+		 /*사용자로부터 입력 받은 숫자의 단부터 9단까지 출력하세요.
+			단, 2~9를 사이가 아닌 수를 입력하면 “2~9 사이 숫자만 입력해주세요”를 출력하세요.
 
-	숫자 : 4 숫자 : 10
-	===== 4단 ===== 2~9 사이 숫자만 입력해주세요.
-	===== 5단 =====
-	===== 6단 =====
-	===== 7단 =====
-	===== 8단 =====
-	===== 9단 =====
-	(해당 단의 내용들은 길이 상 생략)
-*/
+			숫자 : 4 숫자 : 10
+			===== 4단 ===== 2~9 사이 숫자만 입력해주세요.
+			===== 5단 =====
+			===== 6단 =====
+			===== 7단 =====
+			===== 8단 =====
+			===== 9단 =====
+			(해당 단의 내용들은 길이 상 생략)
+		*/
 
-	System.out.print("숫자 :");
-	int input = sc.nextInt();
-	
-	if(input < 2 || input >9) { // 2~9 범위를 벗어난 경우
-		System.out.print("2 ~ 9  숫자만 입력하세요");
-	} else {
-		// 입력받은 숫자의 단부터 9단까지 단 증가하면서 반복 출력
-		for(int i = 1; i <= 9; i++) {
-			System.out.printf("%d X %d = %d\n", dan, i, dan * i);
-		}
-	}
-	
+		 
+		 System.out.print("숫자: ");
+	        int input = sc.nextInt();
+
+	        if (input < 2 || input > 9) {
+	            System.out.println("2~9 사이 숫자만 입력해주세요.");
+	        } else {
+	            for (int dan = input; dan <= 9; dan++) {
+	                System.out.println("===== " + dan + "단 =====");
+	                for (int i = 1; i <= 9; i++) {
+	                    System.out.printf("%d * %d = %d\n", dan, i, dan * i);
+	                }
+	                System.out.println();
+	            }
+	        }
+	    }
+
+
 	public void practice7() {
 		/*정수 입력 : 4
 *
@@ -215,7 +220,4 @@ for(int row = 1; row <= input; row++) { //1~4까지 4번 반복
 		
 	}
 	
-	
-
-	}
 }

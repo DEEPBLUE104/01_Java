@@ -3,8 +3,10 @@ package home.at.work.array;
 public class ArrayRun {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+		 ArrayExample ae = new  ArrayExample();
+		// ae.ex1();
+		  ae.ex2();
 	}
 
 }

@@ -16,8 +16,11 @@ public class LoopRun {
 		//	run.lp09();
 		//	run.lp10();
 		//	run.lp11();
-			run.lp12();
-		
+		//	run.lp12();
+	
+		WhileExample we = new WhileExample();
+	//	we.ex1();	
+		we.ex2();	
 	}
 
 }

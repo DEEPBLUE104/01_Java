@@ -235,7 +235,6 @@ public class ArrayExample1 {
 		System.out.println("최저점 :" + min);
 	}
 
-	
 	public void ex5() {
 		//점심 메뉴 뽑기 프로그램
 		String [] arr = {"김밥","서브웨이","햄버거","백반","국밥","짜장면"};

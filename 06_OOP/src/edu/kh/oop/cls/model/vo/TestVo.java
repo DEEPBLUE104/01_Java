@@ -1,4 +1,4 @@
-package edu.kh.oop.cls.model.vo;
+ package edu.kh.oop.cls.model.vo;
 
 class TestVo {
 	//접근제한자 (default): 같은 패키지내에서만 사용 가능함.

@@ -8,7 +8,10 @@ public class ClsService /*extends Student*/{
 	//부모로 Student 클래스를 상속받음
 	//Student(부모) - > ClsService(자식)
 	
+<<<<<<< HEAD
 	// public ClsService() {} //기본생성자
+=======
+>>>>>>> 3af50b2 (Java_01)
 	
 	public void ex1() {
 		//클래스 접근제한자 확인하기
@@ -28,13 +31,22 @@ public class ClsService /*extends Student*/{
 	
 	//상속 관계에서 직접 접근 가능 범위 테스트
 	//* 상속받으면 부모의 것도 마치 내것처럼 인식, 사용*
+<<<<<<< HEAD
 	//System.out.println( v1 ); //public 접근제한자
 	//System.out.println( v2 );	//protexted 접근제한자
+=======
+	//System.out.println( v1 );
+	//System.out.println( v2 );
+>>>>>>> 3af50b2 (Java_01)
 	//Student 클래스를 ClsService가 상속받았으므로
 	//Student의 protected 변수인 v2는 직접접근 가능
 	
 	//System.out.println( v3 ); //(default)는 다른 패키지 x
+<<<<<<< HEAD
 	//System.out.println( v4 ); // private 해당클래스 내부가 아닌 다른 클래스 x
+=======
+	//System.out.println( v4 ); // 해당클래스 내부가 아닌 다른 클래스 x
+>>>>>>> 3af50b2 (Java_01)
 	
 	}
 
@@ -59,6 +71,7 @@ public class ClsService /*extends Student*/{
 		System.out.println( std2.schoolName );
 		System.out.println(Student.schoolName);
 	
+<<<<<<< HEAD
 		/*
 		 *static
 		 *
@@ -71,6 +84,8 @@ public class ClsService /*extends Student*/{
 		 * 
 		 * 
 		 * */
+=======
+>>>>>>> 3af50b2 (Java_01)
 	}
 
 	public void ex3() {
@@ -85,7 +100,11 @@ public class ClsService /*extends Student*/{
 		System.out.println(u1.getUserAge());
 		System.out.println(u1.getUserGender());
 	
+<<<<<<< HEAD
 		User u2 = new User();
+=======
+User u2 = new User();
+>>>>>>> 3af50b2 (Java_01)
 		
 		System.out.println(u2.getUserId());
 		System.out.println(u2.getUserPw());
@@ -93,10 +112,13 @@ public class ClsService /*extends Student*/{
 		System.out.println(u2.getUserAge());
 		System.out.println(u2.getUserGender());
 	
+<<<<<<< HEAD
 		//문제점 : u1이 참조하고 있는 User 객체와
 		//u2가 참조하고 있는 User 객체의 필드값이 모두 동일함
 		//왜? 같은 기본생성자로 User 객체를 생성했기 때문에
 		
+=======
+>>>>>>> 3af50b2 (Java_01)
 		System.out.println("===================");
 	
 		//해결방법 1: setter를 이용해서 새로운 값 재대입
@@ -113,6 +135,7 @@ public class ClsService /*extends Student*/{
 		System.out.println(u2.getUserGender());
 		System.out.println(u2.getUserId());
 
+<<<<<<< HEAD
 		//해결방법 2: 매개변수 생성자를 이용해서
 		//객체가 생성될 때 부터 다른 값으로 필드를 초기화
 		User u3 = new User("test3","password1234");
@@ -150,5 +173,36 @@ public class ClsService /*extends Student*/{
 		System.out.println(u1);
 		System.out.println(u1.toString());
 		// u1.toString() 
+=======
+	//해결방법 2: 매개변수 생성자를 이용해서
+	//객체가 생성될 때 부터 다른 값으로 필드를 초기화
+	
+	User u3 = new User("test3","password1234");
+	//매개변수 생성자
+	System.out.println(u3.getUserId());
+	System.out.println(u3.getUserPw());
+	System.out.println(u3.getUserName());
+	System.out.println(u3.getUserAge());
+	System.out.println(u3.getUserGender());
+	System.out.println(u3.getUserId());
+
+	
+	}
+
+	public void ex4() {
+		//매개변수 생성자 예제
+		User u1 = new User(); //기본생성자
+		User u2 = new User("user02","pass02"); //매개변수 2개 생성자
+		User u3 = new User("user03","pass03",
+				"김길동",30,'남'); //필드 전부 초기화
+		
+		//매개변수 5개짜리 생성자(전부 초기화)
+		
+	System.out.printf("u1 : %s / %s / %s / %d / %c\n", 
+			u1.getGetUserId(), u1.getUserPw(), u1.getUserName(),
+			u1.getUserAge(), u1.getUserGender() );	
+	
+		
+>>>>>>> 3af50b2 (Java_01)
 	}
 }

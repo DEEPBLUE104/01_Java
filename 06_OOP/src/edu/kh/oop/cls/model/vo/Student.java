@@ -1,4 +1,8 @@
+<<<<<<< HEAD
   package edu.kh.oop.cls.model.vo;
+=======
+package edu.kh.oop.cls.model.vo;
+>>>>>>> 3af50b2 (Java_01)
 
 public class Student { // 클래스 선언부
 //[접근제한자] [예약어] class 클래스명
@@ -25,21 +29,27 @@ public class Student { // 클래스 선언부
 	//static 예약어
 	public static String schoolName = "KH고등학교";
 	
+<<<<<<< HEAD
 	//final 예약어
 	private final int TEMP1 = 100;
 	
 	
 	
+=======
+>>>>>>> 3af50b2 (Java_01)
 	//2. 생성자
 	
 	
 	//3. 메서드
+<<<<<<< HEAD
 	//getter만 만들어진 이유 : final 예약어가 붙은 TEMP1은 상수
 	//재대입 불가함( == setter 굳이x)
 	public int getTEMP1() {
 		return TEMP1;
 	}
 
+=======
+>>>>>>> 3af50b2 (Java_01)
 	public void ex() {
 		// 클래스 접근제한자 확인하기
 		TestVo test = new TestVo();
@@ -56,6 +66,10 @@ public class Student { // 클래스 선언부
 	
 	}
 
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 3af50b2 (Java_01)
 	
 }

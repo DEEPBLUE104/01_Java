@@ -3,14 +3,6 @@ package home.at.work.array;
 public class ArrayRun {
 
 	public static void main(String[] args) {
-
-		 ClassExample ce = new  ClassExample();
-	//	 ce.ex1();
-	//	 ce.ex2();
-	//	 ce.ex3();
-	//	 ce.ex4();
-	//	 ce.ex5();
-	//	 ce.ex6();
 		
 		 ArrayExample ae = new  ArrayExample();
 		// ae.ex1();
@@ -19,7 +11,16 @@ public class ArrayRun {
 	    // ae.ex4();
 	    // ae.ex5();
 		// ae.ex6();
-		  ae.ex7();
+		// ae.ex7();
+		// ae.ex8();
+		// ae.ex9();
+		// ae.ex10();
+		// ae.ex11();
+		// ae.ex12();
+		// ae.ex13();
+	    // ae.ex20();
+		//   ae.ex21();
+		   ae.ex22();
 	}
 
 }

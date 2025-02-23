@@ -16,8 +16,12 @@ public class Book {
 		this.discountRate = discountRate;
 		this.author = author;
 	
-		
 	}
+		@Override
+		public String toString() {
+			return title + " / " + price + " / " + discountRate + "/" + author;
+		}
+		
 	public String getTitle() {
 		return title;
 	}
@@ -50,10 +54,7 @@ public class Book {
 		this.author = author;
 	}
 
-	public String toString() {
-		return "Book [title=" + title + ", price=" + price + ", discountRate=" + discountRate + ", author=" + author
-				+ "]";
-	}
+	
 
 	
 	

@@ -1,7 +1,7 @@
-package edu.kh.basic;
+package edu.kh.variable.ex1;
 
 public class Java {
 	public static void main(String[] args) {
-		System.out.println("파일 변경");
+		System.out.println("variable");
 	}
-}
+	}

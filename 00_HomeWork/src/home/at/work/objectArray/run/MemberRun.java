@@ -9,7 +9,8 @@ public class MemberRun {
 		MemberService service = new MemberService();
 		
 		service.displayMenu();
-	
+		
+		
 	}
 
 }

@@ -2,7 +2,7 @@ package com.hw2.model.dto;
 
 public abstract class Person {
 
-	private String id;
+	protected String id;
 	protected String name;
 	
 	public Person() {	}

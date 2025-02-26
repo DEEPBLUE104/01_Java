@@ -6,6 +6,7 @@ public class Employee extends Person {
 	
 	public Employee(String id, String name, String position) {
 		super(id, name);
+		this.id = id;
 		this.position = position;
 	}
 
@@ -20,7 +21,7 @@ public class Employee extends Person {
 
 	@Override
 	public String getInfo() {
-		return "ID :" + getId() + "이름 : " + name + "직책 : " + position;
+		return String.format("ID : %s, 이름: %s, 직책 :%s", id,name,position);
 	}
 
 }

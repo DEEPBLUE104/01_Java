@@ -9,19 +9,25 @@ public class Run2 {
 
 	public static void main(String[] args) {
 
-		Book book[] = new Book[3];
+		Book books[] = new Book[3];
 		
-		Book b1 = new Novel("해리 포터","J.K 롤링","판타지");
-		Book b2 = new Textbook("자바 프로그래밍","James Gosling","컴퓨터 과학");
-		Book b3 = new Poetry("우리들의 사랑시","김소월",30);
+		books[0] = new Novel("해리 포터","J.K 롤링","판타지");
+		// 부모타입 참조변수 = 자식객체 (업캐스팅)
 		
-		book[0] = b1; //소설
-		book[1] = b2; //텍북
-		book[2] = b3; // 시
+		books[1] = new Textbook("자바 프로그래밍","James Gosling","컴퓨터 과학");
+		// 부모타입 참조변수 = 자식객체 (업캐스팅)
 		
-		book[0].displayInfo();
-		book[1].displayInfo();
-		book[2].displayInfo();
+		books[2] = new Poetry("우리들의 사랑시","김소월",30);
+		// 부모타입 참조변수 = 자식객체 (업캐스팅)
+		
+		
+		// 모든 도서 정보 출력
+		for(Book book : books) {
+				book.displayInfo();
+				System.out.println(); //개행
+		}
+		
+		
 	}
 
 }

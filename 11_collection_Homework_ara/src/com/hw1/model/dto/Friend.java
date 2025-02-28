@@ -1,5 +1,7 @@
 package com.hw1.model.dto;
 
+import java.util.Comparator;
+
 public class Friend {
 
 	private String name;
@@ -19,6 +21,8 @@ public class Friend {
 		this.name = name;
 	}
 
-	public void pickLeader() {
+	public void pickLeader() {	
+		System.out.println(name + "가 떡잎방법대장이 되었다.");
 	}
-}
+		
+	}

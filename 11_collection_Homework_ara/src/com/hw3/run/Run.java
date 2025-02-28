@@ -7,7 +7,8 @@ public class Run {
 	public static void main(String[] args) {
 
 		BookService bs = new BookService();
-		bs.booklist();
+		bs.displaymenu();
+		
 	}
 
 }

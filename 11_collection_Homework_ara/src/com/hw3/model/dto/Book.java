@@ -58,6 +58,12 @@ public class Book {
 	public void setBookmaker(String bookmaker) {
 		this.bookmaker = bookmaker;
 	}
+
+	@Override
+	public String toString() {
+		return booknumber + "번 도서 : [도서제목 :" + title + "/ 도서저자" + author +
+				"/ 도서가격 : " + price + "원 / 출판사 :" + bookmaker + "]";
+	}
 	
 	
 }

@@ -189,27 +189,37 @@ public class BookService {
 	
 
 	public String removeBook() {
-		System.out.print("인덱스 번호 :");
-		int index = sc.nextInt();
+		System.out.print("=======도서 삭제=======");
+		selectAll();
+		
+		System.out.print("삭제할 도서의 번호를 입력하세요 :");
+		int deleteNum = sc.nextInt();
 
-		if (bookList.isEmpty())
-			return "입력된 도서정보가 없습니다.";
-
-		if (index < 0)
-			return "음수는 입력할 수 없습니다.";
-
-		if (index >= bookList.size())
-			return "범위를 넘어선 값을 입력할 수 없습니다.";
-
-		System.out.print("정말 삭제 하시겠습니까? (Y/N) : ");
-		char ch = sc.next().toUpperCase().charAt(0);
-
-		if (ch == 'Y') {
-			Book temp = bookList.remove(index);
-			return temp.getTitle() + "의 정보가 제거 되었습니다.";
+		for(Book temp : bookList) {
+			
+			if(temp.getBooknumber() == deleteNum) {
+				int index = bookList.indexOf(temp);
+				// int List.indexOf(Object) : List에 일치하는 객체가 있으면 그 객체가 있는 index번호 반환
+				
+				System.out.println("index 번호 : " + index);
+				
+				System.out.print("정말 삭제하시겠습니까? (Y/N) : ");
+				
+				char answer = sc.next().toUpperCase().charAt(0); // "y" -> "Y" -> 'Y'
+				
+				if(answer == 'Y') {
+					bookList.remove(index);
+					break;
+				} else {
+					return "삭제를 진행하지 않습니다";
+				}
+			}
+			
 		}
-		return "취소";
+		
+		return "삭제 끝";
 	}
+	
 
 	public String plusStarBook() {
 		System.out.println("======즐겨찾기 도서 등록======");
@@ -278,9 +288,15 @@ public class BookService {
 
 	public void pickStarBook() {
 
-		for (int i = 0; i < starlist.size(); i++) {
-			System.out.println(starlist.get(i));
-		}
-
+int max = bookList.size();
+		
+		int random = (int)(Math.random() * max); // 0 ~ 리스트의 마지막인데스번호
+		
+		System.out.println( bookList.get(random).getTitle() );
+		
 	}
+	
+	
+	
+	
 }

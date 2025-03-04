@@ -28,7 +28,7 @@ public class Run2 {
 		Scanner sc = new Scanner(System.in);
 		
 		while(true) {
-			System.out.print("이름");
+			System.out.print("이름 :");
 			String name = sc.next();
 			
 			System.out.print("나이 : ");

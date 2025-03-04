@@ -1,6 +1,7 @@
 package com.toyFactory.model.dto;
 
 import java.util.Objects;
+import java.util.Set;
 
 public class Toy {
 
@@ -9,11 +10,11 @@ public class Toy {
 	private int price;
 	private String color;
 	private String madeDay;
-	private String materials;
+	private Set<String> materials;
 	
 	public Toy() {	}
 	
-	public Toy(String toyname, int toyage, int price, String color, String madeDay, String materials) {
+	public Toy(String toyname, int toyage, int price, String color, String madeDay, Set<String> materials) {
 		super();
 		this.toyname = toyname;
 		this.toyage = toyage;
@@ -63,20 +64,36 @@ public class Toy {
 		this.madeDay = madeDay;
 	}
 	
+	
 
-	public String getMaterials() {
+	public Set<String> getMaterials() {
 		return materials;
 	}
 
-	public void setMaterials(String materials) {
+	public void setMaterials(Set<String> materials) {
 		this.materials = materials;
 	}
 
+	public String getMaterialsAsString() {
+		  StringBuilder sb = new StringBuilder(); //가변 문자열 객체(비동기)
+		  
+		  if(materials.size() == 0) {
+			  return "없음";
+		  }
+	
+		  for(String material : materials) {
+			  sb.append(material).append(",");
+		  }
+	
+		  sb.setLength(sb.length() -2);
+		  return sb.toString();
+	}
+	
 	@Override
 	public String toString() {
 		return String.format
 		("이름 : %s / 가격 : %d / 색상 : %s / 사용가능연령 : %d / 제조년월일 : %s / 재료 : %s",
-				toyname, price, color, toyage, madeDay, materials);
+				toyname, price, color, toyage, madeDay, getMaterialsAsString());
 	}
 
 	@Override
@@ -97,7 +114,7 @@ public class Toy {
 				&& Objects.equals(materials, other.materials) && price == other.price && toyage == other.toyage
 				&& Objects.equals(toyname, other.toyname);
 	}
-	
+
 	
 	
 	

@@ -12,24 +12,48 @@ import com.toyFactory.model.dto.Toy;
 
 public class ToyFactory {
 
-	Scanner sc = new Scanner(System.in);
-	Set<Toy> toyset = new HashSet<>();
-	Map<Integer, String> map = new HashMap<Integer, String>();
+	private Scanner sc = new Scanner(System.in);
+	private Set<Toy> toyset = new HashSet<>();
+	private Map<Integer, String> materialMap = new HashMap<Integer, String>();
 	Toy toy = new Toy();
 	
 	public ToyFactory() {
 	
-	map.put(1, "면직물");
-	map.put(2, "플라스틱");
-	map.put(3, "유리");
-	map.put(4, "고무");
+	materialMap.put(1, "면직물");
+	materialMap.put(2, "플라스틱");
+	materialMap.put(3, "유리");
+	materialMap.put(4, "고무");
 
-	toyset.add(new Toy("마미롱레그", 8, 36000, "분홍색", "19950805", "면직물, 고무"));
-	toyset.add(new Toy("허기워기", 5, 12000, "파란색", "19940312", "면직물, 플라스틱"));
-	toyset.add(new Toy("키시미시", 5, 15000, "분홍색", "19940505", "면직물, 플라스틱"));
-	toyset.add(new Toy("캣냅", 8, 27000, "보라색", "19960128", "면직물, 플라스틱"));
-	toyset.add(new Toy("파피", 12, 57000, "빨간색", "19931225", "면직물, 플라스틱 ,고무"));
+	toyset.add(new Toy("마미롱레그", 8, 36000, "분홍색", "19950805", addMaterials(1,4)));
+	toyset.add(new Toy("허기워기", 5, 12000, "파란색", "19940312", addMaterials(1,2)));
+	toyset.add(new Toy("키시미시", 5, 15000, "분홍색", "19940505", addMaterials(1,2)));
+	toyset.add(new Toy("캣냅", 8, 27000, "보라색", "19960128", addMaterials(1,2)));
+	toyset.add(new Toy("파피", 12, 57000, "빨간색", "19931225", addMaterials(1,2,4)));
 }
+	
+	/*
+	 * 매개변수로 전달받은 값들을 재료저장 Map에 있는지 확인하고 Set형태로 반환하는 메서드
+	 * 
+	 * 가변인자 작성법: 자료형...변수명 -> 매개변수의 수가 정확히 몇 개인지 특정할 수 없을 때 사용
+	 * 
+	 * @return
+	 * */
+	public Set<String> addMaterials(Integer...materials /* List<Integer> materials */ /* int[] materials */){
+		Set<String> addMaterials = new HashSet<String>(); // 매개변수로 전달받은 재료를 저장하여 반환할 set 객체 생성
+		
+		for(Integer materialKey : materials) {
+			//Map에서 재료 고유 번호(Key)에 대응하는 재료명(value)를 가져와서
+			//addMaterials에 추가
+			
+			String materialValue = materialMap.get(materialKey);
+		
+			if(materialValue != null) {
+				addMaterials.add(materialValue);
+			}
+		}
+		return addMaterials;
+	}
+	
 	public void PlayTimeFactory() {
 
 
@@ -45,6 +69,7 @@ public class ToyFactory {
 				System.out.println("5. 연령별 사용 가능한 장난감 리스트 조회하기");
 				System.out.println("6. 재료 추가");
 				System.out.println("7. 재료 제거");
+				System.out.println("0. 프로그램 종료");
 
 				System.out.print("선택 : ");
 				menuNum = sc.nextInt();
@@ -75,26 +100,34 @@ public class ToyFactory {
 
 	public void seeAllToy() {
 
-		System.out.println("<전체 장난감 목록>");
+		System.out.println("\n<전체 장난감 목록>");
 
 		if (toyset.isEmpty()) {
 			System.out.println("등록된 장난감이 없습니다.");
-		} else {
+			return;
+			
+		} 
 			int index = 1;
 			for (Toy toy : toyset) {
 				System.out.println(index + "." + toy.toString());
 				index++;
 			}
 		}
-	}
 
 
 	public void makeNewToy() {
 	
-		System.out.println("<새로운 장난감 추가>");
+		System.out.println("\n<새로운 장난감 추가>");
 		
 		System.out.print("장난감 이름 :");
 		String toyname = sc.next();
+		
+		for(Toy existingToy : toyset) {
+			if(existingToy.getToyname().equals(toyname)) {
+				System.out.println("이미 같은 이름을 가진 장난감이 존재합니다.");
+				return;
+			}
+		}
 		
 		System.out.print("사용 가능 연령 : ");
 		int toyAge = sc.nextInt();

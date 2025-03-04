@@ -53,7 +53,7 @@ public class ToyFactory {
 				case 1:
 					seeAllToy();
 					break;
-			//	case 2: makeNewToy(); break;
+				case 2: makeNewToy(); break;
 			//	case 3: deleteToy(); break;
 			//	case 4: seeMadeDayToy(); break;
 			//	case 5: seeWhenCanToy(); break;
@@ -113,9 +113,22 @@ public class ToyFactory {
 		String toymaterials = sc.next();
 		
 		if(toymaterials != "q") {
-		
+			toyset.add(toymaterials);
 		}
-		
+		System.out.println("새로운 장난감이 추가되었습니다.");
 	}
 	
+	
+	public void deleteToy() {
+		System.out.println("삭제하실 장난감 번호를 입력해주세요.");
+		int deletetoy = sc.nextInt();
+		
+		for (Toy toy : toyset) {
+			int index = toyset.indexof
+			//list랑 다르게 인덱스가 없나봄...... 어카지..
+			index++;
+		}
+		
+	
+	}
 }

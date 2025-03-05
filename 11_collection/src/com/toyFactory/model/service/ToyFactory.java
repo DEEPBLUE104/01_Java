@@ -146,7 +146,6 @@ public class ToyFactory {
 		String toymaterials = sc.next();
 		
 		if(toymaterials != "q") {
-			toyset.add(toymaterials);
 		}
 		System.out.println("새로운 장난감이 추가되었습니다.");
 	}
@@ -157,9 +156,6 @@ public class ToyFactory {
 		int deletetoy = sc.nextInt();
 		
 		for (Toy toy : toyset) {
-			int index = toyset.indexof
-			//list랑 다르게 인덱스가 없나봄...... 어카지..
-			index++;
 		}
 		
 	

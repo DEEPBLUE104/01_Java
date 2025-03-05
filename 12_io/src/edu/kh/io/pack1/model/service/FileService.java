@@ -158,7 +158,7 @@ public class FileService {
 
 			String result = String.format("%-20s %-20s %-5s %10s", filename, date, type, size);
 
-			System.out.println(result);
+			System.out.println(result); 
 
 		}
 

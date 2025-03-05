@@ -7,9 +7,9 @@ public class FileRun {
 	public static void main(String[] args) {
 		
 		FileService service = new FileService();
-		//service.method1();
-		service.method2();
-		//service.method3();
+		// service.method1();
+		// service.method2();
+		service.method3();
 	}
 
 }

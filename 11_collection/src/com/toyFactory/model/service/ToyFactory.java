@@ -142,12 +142,20 @@ public class ToyFactory {
 		System.out.print("제조일 (YYYYMMDD 형식으로 입력) :");
 		String toymakeday = sc.next();
 		
-		System.out.print("재료를 입력하세요 (종료하려면 'q'를 입력하세요.) :");
-		String toymaterials = sc.next();
 		
-		if(toymaterials != "q") {
+		while(true) {
+			System.out.print("재료를 입력하세요 (종료하려면 'q'를 입력하세요.) :");
+			String toymaterials = sc.next();
+			
+			if(toymaterials.equals("q")) {
+				System.out.println("새로운 장난감이 추가되었습니다.");
+				break;
+			}
+			addMaterials().add(toymaterials);
+			toyset.add(new Toy(toyname, toyAge, toyprice, toycolor, toymakeday, addMaterials()));
 		}
-		System.out.println("새로운 장난감이 추가되었습니다.");
+	System.out.println(toyset);
+		
 	}
 	
 	

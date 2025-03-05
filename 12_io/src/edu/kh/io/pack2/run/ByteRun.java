@@ -22,7 +22,14 @@ public class ByteRun {
 		System.out.println(sb.hashCode());  //1706377736
 		System.out.println(sb);*/
 		
-		new ByteService().fileByteOutPut();
+		ByteService service = new ByteService(); 
+	//	service.fileByteOutPut();
+	//	service.bufferedFileByteOutPut();
+	//	service.fileByteInput();
+	//	service.fileByteInput2();
+	//	service.bufferedFileByteInput();
+	//	service.readProperties();
+		service.fileCopy();
 	}
 
 }

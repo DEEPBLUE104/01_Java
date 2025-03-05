@@ -90,7 +90,7 @@ public class FileService {
 		// 문자열에서 "\"를 표기하는 방법 "\\"
 		// -> 역슬래시는 이스케이프 문자로 사용됨
 		// -> 역슬래시 자체를 문자로 사용하고 싶을 땐 2개를 사용 \\
-		File file = new File("\\io_test_20250305\\파일생성.txt");
+		File file = new File("\\io_test\\20250305\\파일생성.txt");
 
 		if ( !file.exists() ) { // 존재하지 않으면
 

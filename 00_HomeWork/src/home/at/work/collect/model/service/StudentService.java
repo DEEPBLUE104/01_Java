@@ -68,4 +68,10 @@ public class StudentService {
 		}while(menuNum != 0);
 	}
 
+	
+	public void addStudent() {
+		
+		
+		
+	}
 }

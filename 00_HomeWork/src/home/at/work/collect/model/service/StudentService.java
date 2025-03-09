@@ -71,7 +71,23 @@ public class StudentService {
 	
 	public void addStudent() {
 		
+		System.out.println("=========학생 정보 추가==========");
 		
+		System.out.print("학생 이름");
+		String stuName = sc.next();
+		
+		System.out.print("학생 나이");
+		int stuAge = sc.nextInt();
+		sc.nextLine();
+		
+		System.out.print("학생 거주지");
+		sc.next();
+		
+		System.out.print("학생 성별");
+		char stuGender = sc.next().charAt(0);
+		
+		System.out.println("학생 점수");
+		int stuScore = sc.nextInt();
 		
 	}
 }
